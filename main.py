@@ -1,8 +1,8 @@
 # backend/main.py
 
 from fastapi import FastAPI, HTTPException
-from .models import Expense
-from .crud import add_expense, get_all_expenses, update_expense, delete_expense
+from models import Expense
+from crud import add_expense, get_all_expenses, update_expense, delete_expense
 
 app = FastAPI()
 

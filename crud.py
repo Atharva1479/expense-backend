@@ -1,7 +1,7 @@
 # backend/crud.py
 
-from .database import create_connection
-from .models import Expense
+from database import create_connection
+from models import Expense
 
 # Function to add a new expense
 def add_expense(expense_data: Expense):
