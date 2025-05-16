@@ -3,8 +3,14 @@
 from fastapi import FastAPI, HTTPException
 from models import Expense
 from crud import add_expense, get_all_expenses, update_expense, delete_expense
+from database import init_db
 
 app = FastAPI()
+
+@app.on_event("startup")
+def on_startup():
+    init_db()
+
 
 # POST: Add a new expense
 @app.post("/expenses")
